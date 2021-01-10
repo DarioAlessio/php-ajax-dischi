@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #00004d;
+  font-style: oblique;
+}
+
+#app{
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.header{
+  width: 100%;
+  height: 50px;
+  background-color: #00001a;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.header > img{
+  width: 50px;
+  position: absolute;
+  left: 70px;
+}
+
+.header > select{
+  cursor: pointer;
+
+}
+
+.main{
+  background-color: #00001a;
+  margin: 10px;
+  width: 20%;
+  height: 400px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.image{
+  width: 100%;
+  padding: 10px;
+}
+
+.title{
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.author , .year {
+  color: #808080;
+  margin-top: 15px;
+  font-size: 15px;
+}
