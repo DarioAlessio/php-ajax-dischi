@@ -41,4 +41,16 @@
         ]
     ];
 
-    echo json_encode($database);
+    $author = strtolower($_GET['author']);
+    if (!$author) {
+        echo json_encode($database);
+    } else {
+        $res = [];
+        for ($x=0 ; $x < count($database); $x++) {
+            $track = $database[$x];
+            if (strtolower($track['author']) == $author) {
+                $res[] = $track; //push
+            }
+        }
+        echo json_encode($res);
+    }

@@ -15,6 +15,10 @@
 
       <div class="header">
         <img src="https://www.scdn.co/i/_global/twitter_card-default.jpg">
+        <button class="button" @click="clear">CLEAR</button>
+        <button class="button" v-for="track in database" @click="update(track.author)">
+                  {{ track.author }}
+        </button>
       </div>
 
       <div v-for="track in database" class="main">

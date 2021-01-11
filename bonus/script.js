@@ -2,13 +2,27 @@ function init() {
     new Vue({
         el: '#app',
         data: {
-            database: [],
+            database: []
+
         },
-        mounted:function(){
-          axios.get('database.php').then((risposta) =>{
-            this.database = risposta.data;
-            console.log(this.database);
-          })
+        methods: {
+            update: function(author) {
+                axios
+                    .get('database.php', {
+                        params: {
+                            'author': author
+                        }
+                    })
+                    .then(res => {
+                        this.database = res.data;
+                    });
+            },
+            clear: function() {
+                this.update('');
+            }
+        },
+        mounted: function() {
+            this.clear();
         }
     });
 }
